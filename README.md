@@ -74,6 +74,10 @@ Paper: [Fully Convolutional Networks for Multi-Source Building Extraction from A
 [Link](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html)
 
 
+## Our Related Work
+
+RDP-Net: Region Detail Preserving Network for Change Detection | [Paper](https://ieeexplore.ieee.org/document/9970750) | [Code](https://github.com/Chnja/RDPNet)
+
 ## Contact
 
 Hongjia Chen: chj1997@whu.edu.cn
