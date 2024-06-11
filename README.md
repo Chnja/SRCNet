@@ -42,7 +42,7 @@ net.load_state_dict(torch.load("RDPNet_CDD.pth"))
 
 This work will be published on [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (JSTARS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443).
 
-The paper will be avaliable on [JSTARS]().
+The paper is now available on [arXiv](https://arxiv.org/abs/2406.05668), and will be avaliable on [JSTARS]().
 
 ### Citation
 
