@@ -26,12 +26,12 @@ net = SRCNet().to(device)
 python train.py
 ```
 
-### Well-trained model
+<!-- ### Well-trained model
 
 ```python
 # For CDD dataset
 net.load_state_dict(torch.load("RDPNet_CDD.pth"))
-```
+``` -->
 
 
 ## Paper
