@@ -5,6 +5,10 @@
 ![license](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)
 ![](https://img.shields.io/github/stars/chnja/srcnet?color=green&style=social)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/src-net-bi-temporal-spatial-relationship/building-change-detection-for-remote-sensing)](https://paperswithcode.com/sota/building-change-detection-for-remote-sensing?p=src-net-bi-temporal-spatial-relationship)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/src-net-bi-temporal-spatial-relationship/building-change-detection-for-remote-sensing-1)](https://paperswithcode.com/sota/building-change-detection-for-remote-sensing-1?p=src-net-bi-temporal-spatial-relationship)
+
 ![SRC-Net](img/SRCNet.png)
 
 ## Introduction
