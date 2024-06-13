@@ -42,7 +42,7 @@ net.load_state_dict(torch.load("RDPNet_CDD.pth"))
 
 This work will be published on [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (JSTARS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443).
 
-The paper is now available on [arXiv](https://arxiv.org/abs/2406.05668), and will be avaliable on [JSTARS]().
+The paper is now available on [arXiv](https://arxiv.org/abs/2406.05668), and will be avaliable on [JSTARS](https://ieeexplore.ieee.org/document/10552311).
 
 ### Citation
 
@@ -50,12 +50,12 @@ If you find this work valuable or use our code in your own research, please cons
 
 ```bibtex
 @article{chen2024srcnet,
+    author={Chen, Hongjia and Xu, Xin and Pu, Fangling},
+    journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 
     title={SRC-Net: Bi-Temporal Spatial Relationship Concerned Network for Change Detection}, 
-    author={Hongjia Chen and Xin Xu and Fangling Pu},
     year={2024},
-    eprint={2406.05668},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    pages={1-13},
+    doi={10.1109/JSTARS.2024.3411622}
 }
 ```
 
@@ -80,4 +80,4 @@ RDP-Net: Region Detail Preserving Network for Change Detection | [Paper](https:/
 
 ## Contact
 
-Hongjia Chen: chj1997@whu.edu.cn
+Chen Hongjia: chj1997@whu.edu.cn
