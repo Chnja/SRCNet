@@ -122,30 +122,34 @@ class EdgeLoss:
         return loss.mean()
 
 
-def combine_loss(predictions, target, Diss, diff, sigma):
-    loss = 0
-    sigmas = sigma
-    sigmas = sigmas * sigmas
-    focal0 = FocalLoss(gamma=0, alpha=None)
-    EL = EdgeLoss(KSIZE=7)
+class CombineLoss(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.EL = EdgeLoss(KSIZE=7)
 
-    def calloss(prediction, target, sigmas):
+    def calloss(self, prediction, target, sigmas):
+        focal0 = FocalLoss(gamma=0, alpha=None)
         bce = focal0(prediction, target)
         dice = DiceLoss(prediction, target)
-        edge = EL.edgeLoss(prediction, target)
+        edge = self.EL.edgeLoss(prediction, target)
         return bce / sigmas[0] + dice / sigmas[1] + edge / sigmas[2]
 
-    for prediction in predictions:
-        prediction = F.softmax(prediction, dim=1)
-        loss += calloss(prediction, target, sigmas)
+    def forward(self, predictions, target, Diss, diff, sigma):
+        loss = 0
+        sigmas = sigma
+        sigmas = sigmas * sigmas
 
-    for Dis in Diss:
-        loss += calloss(Dis, target, sigmas)
+        for prediction in predictions:
+            prediction = F.softmax(prediction, dim=1)
+            loss += self.calloss(prediction, target, sigmas)
 
-    if len(diff) != 0:
-        (dif,) = diff
-        loss += dif
+        for Dis in Diss:
+            loss += self.calloss(Dis, target, sigmas)
 
-    loss += torch.sum(torch.log(sigmas)) / 2
+        if len(diff) != 0:
+            (dif,) = diff
+            loss += dif
 
-    return loss
+        loss += torch.sum(torch.log(sigmas)) / 2
+
+        return loss

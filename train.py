@@ -9,7 +9,7 @@ import torch
 import os
 from tensorboardX import SummaryWriter
 from TrainUse import seed_torch, CDMetrics, CTime
-from Loss import combine_loss
+from Loss import CombineLoss
 
 from nloaders import nloaders
 import warnings
@@ -36,7 +36,7 @@ writer = SummaryWriter(netName + "/")
 
 seed_torch(seed=3407)
 
-criterion = combine_loss
+criterion = CombineLoss()
 
 train_loader, val_loader = nloaders(BATCH_SIZE, dataset_dir="/mnt/ramdisk/LEVIR-cd/")
 optimizer = torch.optim.AdamW(net.parameters(), lr=LR)
